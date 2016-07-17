@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xheartx.com/404.html</loc>
+    
+    <lastmod>2016-07-17T16:58:59.999Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xheartx.com/2016/01/01/hello-world/</loc>
+    
+    <lastmod>2016-07-17T16:13:19.698Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xheartx.com/2016/01/15/Hexo-The-problem-summary/</loc>
     
     <lastmod>2016-07-17T14:31:54.843Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</loc>
     
     <lastmod>2016-07-17T10:48:58.600Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xheartx.com/2016/01/01/hello-world/</loc>
-    
-    <lastmod>2016-07-17T09:01:54.624Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>http://xheartx.com/tags/index.html</loc>
     
     <lastmod>2016-07-12T11:00:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xheartx.com/404.html</loc>
-    
-    <lastmod>2016-07-12T10:46:17.000Z</lastmod>
     
   </url>
   
