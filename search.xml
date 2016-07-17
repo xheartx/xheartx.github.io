@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[Hexo 问题汇总]]></title>
+      <url>http://xheartx.com/2016/01/15/Hexo-The-problem-summary/</url>
+      <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-01.png" alt=""></p>
+<blockquote class="blockquote-center"><br> <strong>生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！</strong><br><br></blockquote>
+
+<a id="more"></a>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo+Github 搭建之路-进阶篇]]></title>
       <url>http://xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-01.png" alt=""></p>
@@ -112,7 +121,58 @@
 <li>包含了配置和懒人脚本；</li>
 </ol>
 </blockquote>
-<p>使用方法官网上都写的很清楚，十分简单，并且不用装任何软件。我是直接同步到网盘上了，这个方法和第一种方法不冲突，可以一起使用。</p>
+<p>使用方法<a href="http://project.bitmoe.cn/PortableHexo/" target="_blank" rel="external">官网</a> 上都写的很清楚，十分简单，并且不用装任何软件。我是直接同步到网盘上了，这个方法和第一种方法不冲突，可以一起使用。</p>
+<h1 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h1><p>SEO (Search Engine Optimization)，即搜索引擎优化。对网站做SEO优化，有利于提高搜索引擎的收录速度及网页排名。下面讲解一些简单的SEO优化方法，主要针对Hexo网站。</p>
+<hr>
+<h2 id="SEO优化之title"><a href="#SEO优化之title" class="headerlink" title="SEO优化之title"></a>SEO优化之title</h2><p>编辑站点目录下的<code>themes/layout/index.swig</code>文件，</p>
+<p>将下面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endlock %&#125;</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125; &#123;% endlock %&#125;</span><br></pre></td></tr></table></figure>
+<p>这时将网站的描述及关键词加入了网站的<code>title</code>中，更有利于详细地描述网站。</p>
+<h2 id="添加robots-txt"><a href="#添加robots-txt" class="headerlink" title="添加robots.txt"></a>添加robots.txt</h2><p>robots.txt是一种存放于网站根目录下的ASCII编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt应该放在站点目录下的source文件中，网站生成后在网站的根目录(<code>站点目录/public/</code>)下。</p>
+<p>我的robots.txt文件内容如下</p>
+<pre><code>User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+</code></pre><h2 id="添加sitemap"><a href="#添加sitemap" class="headerlink" title="添加sitemap"></a>添加sitemap</h2><p>Sitemap即网站地图，它的作用在于便于搜索引擎更加智能地抓取网站。最简单和常见的sitemap形式，是XML文件，在其中列出网站中的网址以及关于每个网址的其他元数据（上次更新时间、更新的频率及相对其他网址重要程度等）。</p>
+<p><strong>Step 1</strong>: 安装sitemap生成插件</p>
+<pre><code>npm install hexo-generator-sitemap --save
+npm install hexo-generator-baidu-sitemap --save
+</code></pre><p><strong>Step 2</strong>: 编辑站点目录下的_config.yml，添加</p>
+<pre><code># hexo sitemap网站地图
+sitemap:
+path: sitemap.xml
+baidusitemap:
+path: baidusitemap.xml
+</code></pre><p><strong>Step 3</strong>: 在robots.txt文件中添加</p>
+<pre><code>Sitemap: http://www.jeyzhang.com/sitemap.xml
+Sitemap: http://www.jeyzhang.com/baidusitemap.xml
+</code></pre><h2 id="注册站长平台"><a href="#注册站长平台" class="headerlink" title="注册站长平台"></a>注册站长平台</h2><p>Google站长平台： <a href="https://www.google.com/webmasters/" target="_blank" rel="external">https://www.google.com/webmasters/</a><br>百度站长平台： <a href="http://zhanzhang.baidu.com/linksubmit/" target="_blank" rel="external">http://zhanzhang.baidu.com/linksubmit/</a><br>根据提示注册好之后，添加你的博客域名。然后点击你的域名进入:</p>
+<p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-10.png" alt="Google站长平台"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-11.png" alt="百度站长平台"></p>
+<h2 id="测试robots-txt"><a href="#测试robots-txt" class="headerlink" title="测试robots.txt"></a>测试robots.txt</h2><p>点击左侧的robots.txt测试工具，根据提示提交你的robots.txt，其实刚才我们已经提交了。</p>
+<p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-12.png" alt="Google测试robots"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-13.png" alt="百度测试robots"></p>
+<blockquote>
+<p>注意要0错误才可以，如果有错误的话，会有提示，改正确就可以了。</p>
+</blockquote>
+<h2 id="提交站点地图"><a href="#提交站点地图" class="headerlink" title="提交站点地图"></a>提交站点地图</h2><p>还记得我们刚才创建创建<code>sitemap.xml</code>文件吧,现在它要派上用场了。点击左侧工具栏的<code>站点地图</code>添加。</p>
+<p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-14.png" alt="Google站点地图"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-15.png" alt="百度站点地图"></p>
+<h2 id="抓取方式"><a href="#抓取方式" class="headerlink" title="抓取方式"></a>抓取方式</h2><p>提交站点地图之后，点击左侧的<code>Google 抓取方式</code> || <code>抓取诊断</code>。</p>
+<p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-16.png" alt="Google抓取方式"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-17.png" alt="百度抓取方式"></p>
+<p>在这里我们填上我们需要抓取的url,不填这表示抓取首页，抓取方式可以选择桌面，智能手机等等，自行根据需要选择。填好url之后，点击抓取。<br>然后可能会出现几种情况，如:完成、部分完成、重定向等，自由这三种情况是可以提交的。<br>提交完成后，提交至索引，根据提示操作就可以了。</p>
+<blockquote>
+<p>Google提交之后索引很快就可以搜索到了，百度的就坑了，索引很慢要24小时。</p>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
@@ -208,6 +268,9 @@
 <h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><h2 id="更新hexo："><a href="#更新hexo：" class="headerlink" title="更新hexo："></a>更新hexo：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update -g hexo</span><br></pre></td></tr></table></figure>
 <h2 id="更新主题："><a href="#更新主题：" class="headerlink" title="更新主题："></a>更新主题：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/你的主题</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
 <h2 id="更新插件："><a href="#更新插件：" class="headerlink" title="更新插件："></a>更新插件：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update</span><br></pre></td></tr></table></figure>
+<h1 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h1><p><a href="http://hexo.io/docs/" target="_blank" rel="external">hexo官方文档</a><br><a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">hexo插件大全</a><br><a href="http://www.faviconer.com/" target="_blank" rel="external">自定义网站logo</a><br><a href="http://www.markdown.cn/" target="_blank" rel="external">MarkDown中文网</a><br><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">MarkDown语法说明</a><br><a href="http://www.jiathis.com/" target="_blank" rel="external">社交分享推荐使用jiathis</a><br><a href="http://duoshuo.com/" target="_blank" rel="external">评论插件推荐使用duoshuo</a><br><a href="http://zhanzhang.cnzz.com/" target="_blank" rel="external">网站流量统计推荐cnzz</a><br><a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">网站流量统计推荐百度统计</a></p>
+<hr>
+<p>通过以上的设置，相信你已经可以通过注册域名来访问一个默认的hexo主题页面了。之后的工作就在于，<br>(1)如何对主题进行个性化设置及；<br>(2)发表博文以充实网站内容。<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">这里</a>有关于next主题的个性化设置说明。</p>
 ]]></content>
     </entry>
     
