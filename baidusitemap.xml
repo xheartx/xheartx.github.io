@@ -3,41 +3,18 @@
 
 
     
-    
   <url>
     <loc>http://blog.xheartx.com/2016/01/01/hello-world/</loc>
-    <lastmod>2016-07-17T16:13:19.698Z</lastmod>
+    <lastmod>2016-07-17T20:04:44.112Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
         <pubTime>2016-01-01T08:09:09.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.xheartx.com/2016/01/15/Hexo-The-problem-summary/</loc>
-    <lastmod>2016-07-17T14:31:54.843Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo 问题汇总</title>
-        <pubTime>2016-01-15T05:28:08.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>问题</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://blog.xheartx.com/categories/Hexo/"/>
-          
         </display>
     </data>
     </url>
@@ -45,13 +22,13 @@
     
   <url>
     <loc>http://blog.xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</loc>
-    <lastmod>2016-07-17T10:48:58.600Z</lastmod>
+    <lastmod>2016-07-17T20:04:42.871Z</lastmod>
     <data>
         <display>
         <title>Hexo+Github 搭建之路-进阶篇</title>
         <pubTime>2016-01-10T00:19:44.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
          
         <tag>github</tag>
          
@@ -69,13 +46,13 @@
     
   <url>
     <loc>http://blog.xheartx.com/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/</loc>
-    <lastmod>2016-07-17T09:01:52.138Z</lastmod>
+    <lastmod>2016-07-17T20:04:41.727Z</lastmod>
     <data>
         <display>
         <title>Hexo+Github 搭建之路-基础篇</title>
         <pubTime>2016-01-06T05:28:08.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
          
         <tag>github</tag>
          
@@ -88,6 +65,29 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://blog.xheartx.com/2016/01/15/Hexo-The-problem-summary/</loc>
+    <lastmod>2016-07-17T20:04:40.694Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 问题汇总</title>
+        <pubTime>2016-01-15T05:28:08.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://blog.xheartx.com/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://blog.xheartx.com/2016/01/01/essays-My-first-article/</loc>
