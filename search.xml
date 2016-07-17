@@ -7,7 +7,7 @@
       <title><![CDATA[Hexo+Github 搭建之路-进阶篇]]></title>
       <url>http://xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-01.png" alt=""></p>
-<h1 id="hexo双线部署到github和coding-实现全球快速访问"><a href="#hexo双线部署到github和coding-实现全球快速访问" class="headerlink" title="hexo双线部署到github和coding 实现全球快速访问"></a>hexo双线部署到github和coding 实现全球快速访问</h1><p>如果只把hexo托管在github，但是毕竟github是国外的，访问速度上还是有点慢，所以就有了部署到国内的coding，通过域名解析可以把国内流量的解析到Coding，国外的解析到Github(这里可以用DNSPod的免费服务)。</p>
+<h1 id="hexo双线部署到github和coding"><a href="#hexo双线部署到github和coding" class="headerlink" title="hexo双线部署到github和coding"></a>hexo双线部署到github和coding</h1><p>如果只把hexo托管在github，但是毕竟github是国外的，访问速度上还是有点慢，所以就有了同时再部署到国内的coding，实现全球快速访问，通过域名解析可以把国内流量的解析到Coding，国外的解析到Github(这里可以用DNSPod的免费服务)。</p>
 <a id="more"></a>
 <h2 id="注册Coding账户并建立项目"><a href="#注册Coding账户并建立项目" class="headerlink" title="注册Coding账户并建立项目"></a>注册Coding账户并建立项目</h2><p>github的托管详情，请看<a href="/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/">基础篇</a>。Coding托管的方法与github的类似，托管完成后，你可以手动删除Coding上的项目。具体如下：</p>
 <p>去<a href="https://coding.net" target="_blank" rel="external">Coding的官网</a>注册，在个人主页的<code>项目</code>中创建一个项目，最好创建与你账户名相同的项目。例如，我的账户名为xheart, 创建的项目名为xheart（大小写不区分）。</p>
@@ -44,9 +44,12 @@
 <h2 id="DNS域名解析设置"><a href="#DNS域名解析设置" class="headerlink" title="DNS域名解析设置"></a>DNS域名解析设置</h2><p>域名解析推荐NDSPod国际版，NDSPod的域名解析服务中，提供根据线路进行不同的路由的功能是免费的，NDSPod国内版本目前只对国内线路做细分，没有海外线路的选择，所以不推荐，建议用NDSPod的国际版。</p>
 <p>操作流程：</p>
 <ul>
-<li><p>注册dnspod国际帐号<a href="https://www.dnspod.com/" target="_blank" rel="external">www.dnspod.com</a><br>域名服务商那里更改ns记录为dnspod国际版的nameserver，默认为</p>
-<p>  a.dnspod.com.<br>  b.dnspod.com.<br>  c.dnspod.com.</p>
-</li>
+<li>注册dnspod国际帐号<a href="https://www.dnspod.com/" target="_blank" rel="external">www.dnspod.com</a><br>域名服务商那里更改ns记录为dnspod国际版的nameserver，默认为</li>
+</ul>
+<blockquote>
+<p>   a.dnspod.com.<br>   b.dnspod.com.<br>   c.dnspod.com.</p>
+</blockquote>
+<ul>
 <li>在dnspod添加域名解析：</li>
 </ul>
 <p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-05.png" alt=""></p>
@@ -76,10 +79,40 @@
 <p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-07.png" alt=""></p>
 <h2 id="图片压缩处理"><a href="#图片压缩处理" class="headerlink" title="图片压缩处理"></a>图片压缩处理</h2><ul>
 <li>使用七牛图床，免费账户有10G空间和每个月10G流量，如果不搞清楚 容量 和 流量 的区别，肆无忌惮的用，早晚会用爆的。</li>
-<li>强烈建议使用图片压缩工具<a href="https://tinypng.com/" target="_blank" rel="external">tinypng</a>压缩后再上传到七牛，上传图片必须限制在 200 k 以内。(放心一般截图压缩一下也就100k左右)</li>
+<li>强烈建议使用图片压缩工具 <a href="https://tinypng.com/" target="_blank" rel="external">tinypng</a> 压缩后再上传到七牛，上传图片必须限制在 200 k 以内。(放心一般截图压缩一下也就100k左右)</li>
 <li>使用起来很简单，同样也可以直接拖进去，压缩能力很强大，基本看不出失真。</li>
 </ul>
 <p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-08.png" alt=""></p>
+<hr>
+<h1 id="hexo多台电脑间同步"><a href="#hexo多台电脑间同步" class="headerlink" title="hexo多台电脑间同步"></a>hexo多台电脑间同步</h1><p>由于hexo没有后台，而且全部文件都在本地生成，所以如果在家里电脑上发表了文章后，到公司又写了篇文章，就无法上传，我们的空闲时间都是很难得的，如果终于腾出来个时间想写点东西，却发现没家伙，岂不是很扫兴。我这里整理了现阶段主流的两种解决方案。如下： </p>
+<ul>
+<li>利用git到github分支的方法（大多数人的方法）</li>
+<li>采用便携版，搭建Node+Git+Hexo的绿色环境（个人比较喜欢）</li>
+</ul>
+<h2 id="利用git解决多PC间同步问题"><a href="#利用git解决多PC间同步问题" class="headerlink" title="利用git解决多PC间同步问题"></a>利用git解决多PC间同步问题</h2><p>以下以备份到coding为例，github是一样的道理。</p>
+<h3 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h3><p>在本地博客根目录打开<code>git bash</code> </p>
+<p><code>git init</code>后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;远程项目地址&gt;</span><br><span class="line"></span><br><span class="line">git checkout -b coding-pages分支</span><br><span class="line"></span><br><span class="line">git add -A  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;提交&quot;</span><br><span class="line"></span><br><span class="line">git push origin coding-pages</span><br></pre></td></tr></table></figure></p>
+<p>此时备份到<code>coding-pages</code>分支成功</p>
+<h3 id="在另一台电脑写博备份操作。"><a href="#在另一台电脑写博备份操作。" class="headerlink" title="在另一台电脑写博备份操作。"></a>在另一台电脑写博备份操作。</h3><p>某盘下：打开<code>git bash</code>键入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;远程博客地址&gt; &lt;本地文件夹名&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当前默认为<code>master</code>分支，也就是<code>hexo</code>编译后的静态博客。</p>
+<p>切换到<code>coding-pages</code>分支。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -a </span><br><span class="line">git checkout coding-pages</span><br></pre></td></tr></table></figure>
+<p>输入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli    # 安装hexo</span><br><span class="line"></span><br><span class="line">npm install                # 安装依赖包</span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git   # 用git部署插件</span><br><span class="line"></span><br><span class="line">（记得，不需要hexo init这条指令）。</span><br><span class="line"></span><br><span class="line">npm install hexo-generator-feed --save       RSS插件</span><br></pre></td></tr></table></figure>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g  </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>打开： <code>http://localhost:4000/</code>   博客又完整回来了，神奇吧。。</p>
+<h2 id="采用便携版，搭建Node-Git-Hexo的绿色环境"><a href="#采用便携版，搭建Node-Git-Hexo的绿色环境" class="headerlink" title="采用便携版，搭建Node+Git+Hexo的绿色环境"></a>采用便携版，搭建Node+Git+Hexo的绿色环境</h2><p>由于我有时需要用到别人的电脑写东西，但是在别人电脑上随便装一些东西(Node+Git+Hexo)不太礼貌，所以这种便捷版的方案很适合我。</p>
+<p>首先还是要感谢下这个 <a href="https://project.bitmoe.cn/PortableHexo/" target="_blank" rel="external">Hexo 便携版</a>  的开发团队：<em> 深圳比特萌信息技术有限公司 </em>。</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-09.png" alt=""></p>
+<blockquote>
+<p>版本特性</p>
+<ol>
+<li>解压即用， 免 Nodejs 和 Git 的安装和配置；</li>
+<li>包含了配置和懒人脚本；</li>
+</ol>
+</blockquote>
+<p>使用方法官网上都写的很清楚，十分简单，并且不用装任何软件。我是直接同步到网盘上了，这个方法和第一种方法不冲突，可以一起使用。</p>
 ]]></content>
     </entry>
     
