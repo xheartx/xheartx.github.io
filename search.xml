@@ -10,7 +10,45 @@
 <blockquote class="blockquote-center"><br> <strong>生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！</strong><br><br></blockquote>
 
 <a id="more"></a>
-]]></content>
+<h1 id="关于上传文件到github的方法"><a href="#关于上传文件到github的方法" class="headerlink" title="关于上传文件到github的方法"></a>关于上传文件到github的方法</h1><h2 id="首次提交"><a href="#首次提交" class="headerlink" title="首次提交"></a>首次提交</h2><p>在本地根目录打开<code>git bash</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add -A  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git checkout gh-pages</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<h2 id="提交更新"><a href="#提交更新" class="headerlink" title="提交更新"></a>提交更新</h2><ul>
+<li>如果上一次是同一台设备提交的，那就直接同首次提交方法一致</li>
+<li>如果上一次是另一台设备提交的，那需要先将远程服务器github上面的文件 pull 下来，再 push 上去。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git checkout gh-pages</span><br><span class="line"></span><br><span class="line">git pull origin gh-pages</span><br><span class="line"></span><br><span class="line">git add -A  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>如果执行<code>git remote add origin git@git.coding.net:xheart/xheartx.git</code>，出现错误：</p>
+<blockquote>
+<p>fatal: remote origin already exists </p>
+</blockquote>
+<p>则执行以下语句：</p>
+<blockquote>
+<p>git remote rm origin</p>
+</blockquote>
+<p>在执行git push origin master时，报错：</p>
+<blockquote>
+<p>error:failed to push som refs to…….</p>
+</blockquote>
+<p>则执行以下语句：</p>
+<blockquote>
+<p>git push origin gh-pages </p>
+</blockquote>
+<h1 id="git-push用法和常见问题分析"><a href="#git-push用法和常见问题分析" class="headerlink" title="git push用法和常见问题分析"></a>git push用法和常见问题分析</h1><h2 id="Git-push"><a href="#Git-push" class="headerlink" title="Git push"></a>Git push</h2><pre><code>git push origin test:master       // 提交本地test分支作为远程的master分支
+git push origin test:test         // 提交本地test分支作为远程的test分支
+</code></pre><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p>
+<pre><code>git push origin :test             // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心。
+</code></pre><p>提交到github时,如果不想每次都打这么多命令,可以进行这样的设置</p>
+<pre><code>git push --set-upstream origin blog
+#之后就用下面这个命令推送吧
+git push
+</code></pre><h2 id="hexo问题"><a href="#hexo问题" class="headerlink" title="hexo问题"></a>hexo问题</h2><ul>
+<li>先hexo g再执行hexo d布署，也可使直接用hexo d -g</li>
+<li>hexo 更新到3.0之后，deploy的type 的github需要改成git</li>
+<li>在执行 hexo deploy 后,出现 error deployer not found:git 的错误处理</li>
+</ul>
+<p>输入代码：</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>]]></content>
     </entry>
     
     <entry>
@@ -158,7 +196,7 @@ path: baidusitemap.xml
 </code></pre><p><strong>Step 3</strong>: 在robots.txt文件中添加</p>
 <pre><code>Sitemap: http://www.jeyzhang.com/sitemap.xml
 Sitemap: http://www.jeyzhang.com/baidusitemap.xml
-</code></pre><h2 id="注册站长平台"><a href="#注册站长平台" class="headerlink" title="注册站长平台"></a>注册站长平台</h2><p>Google站长平台： <a href="https://www.google.com/webmasters/" target="_blank" rel="external">https://www.google.com/webmasters/</a><br>百度站长平台： <a href="http://zhanzhang.baidu.com/linksubmit/" target="_blank" rel="external">http://zhanzhang.baidu.com/linksubmit/</a><br>根据提示注册好之后，添加你的博客域名。然后点击你的域名进入:</p>
+</code></pre><h2 id="注册站长平台"><a href="#注册站长平台" class="headerlink" title="注册站长平台"></a>注册站长平台</h2><p>Google站长平台： <a href="https://www.google.com/webmasters/" target="_blank" rel="external">https://www.google.com/webmasters/</a><br>百度站长平台： <a href="http://zhanzhang.baidu.com/linksubmit/" target="_blank" rel="external">http://zhanzhang.baidu.com/linksubmit/</a><br>360网址提交入口： <a href="http://info.so.360.cn/site_submit.html" target="_blank" rel="external">http://info.so.360.cn/site_submit.html</a>  (直接提交即可)<br>根据提示注册好之后，添加你的博客域名。然后点击你的域名进入:</p>
 <p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-10.png" alt="Google站长平台"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-11.png" alt="百度站长平台"></p>
 <h2 id="测试robots-txt"><a href="#测试robots-txt" class="headerlink" title="测试robots.txt"></a>测试robots.txt</h2><p>点击左侧的robots.txt测试工具，根据提示提交你的robots.txt，其实刚才我们已经提交了。</p>
 <p><em>Google</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-12.png" alt="Google测试robots"><br><em>百度</em><br><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-13.png" alt="百度测试robots"></p>
