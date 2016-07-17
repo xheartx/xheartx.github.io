@@ -48,6 +48,7 @@
     </div>
     </div>
 <script type="text/javascript" src="assets/vendors/jquery/index.js"></script>
+<script type="text/javascript" src="/assets/vendors/js/CFS.Snow.min.js"></script>
 <script>
     $(document).ready(function () {
         var delay = 1;
@@ -93,6 +94,10 @@
             }
         });
     });
+
+    window.onload = function(){
+            snow.down();
+        };
 </script>
 </body>
 </html>
