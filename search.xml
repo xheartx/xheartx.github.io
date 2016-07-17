@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Hexo 问题汇总]]></title>
-      <url>http://xheartx.com/2016/01/15/Hexo-The-problem-summary/</url>
+      <url>http://blog.xheartx.com/2016/01/15/Hexo-The-problem-summary/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-01.png" alt=""></p>
 <blockquote class="blockquote-center"><br> <strong>生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！</strong><br><br></blockquote>
 
@@ -56,7 +56,7 @@ git push
     
     <entry>
       <title><![CDATA[Hexo+Github 搭建之路-进阶篇]]></title>
-      <url>http://xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</url>
+      <url>http://blog.xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-01.png" alt=""></p>
 <h1 id="hexo双线部署到github和coding"><a href="#hexo双线部署到github和coding" class="headerlink" title="hexo双线部署到github和coding"></a>hexo双线部署到github和coding</h1><p>如果只把hexo托管在github，但是毕竟github是国外的，访问速度上还是有点慢，所以就有了同时再部署到国内的coding，实现全球快速访问，通过域名解析可以把国内流量的解析到Coding，国外的解析到Github(这里可以用DNSPod的免费服务)。</p>
 <a id="more"></a>
@@ -220,7 +220,7 @@ Sitemap: http://www.jeyzhang.com/baidusitemap.xml
     
     <entry>
       <title><![CDATA[Hexo+Github 搭建之路-基础篇]]></title>
-      <url>http://xheartx.com/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/</url>
+      <url>http://blog.xheartx.com/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/hexo-common.png" alt=""></p>
 <blockquote>
 <p>如果你对默认配置满意，只需几个命令便可秒搭一个hexo。<br>如果你跟我一样喜欢折腾下，30分钟也足够个性化。<br>如果你过于喜欢折腾，可以折腾个把星期，尽情的玩。</p>
@@ -318,14 +318,14 @@ Sitemap: http://www.jeyzhang.com/baidusitemap.xml
     
     <entry>
       <title><![CDATA[我的第一篇文章—记录]]></title>
-      <url>http://xheartx.com/2016/01/01/essays-My-first-article/</url>
+      <url>http://blog.xheartx.com/2016/01/01/essays-My-first-article/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-01-01.png" alt=""><br>今天终于能建一个自己的网站了，看了很多的建站教程，最终还是决定在Github Page，毕竟自己刚开始学习，用这里来记录我的学习之路，并时刻提醒自己，要努力！！<br><a id="more"></a>—–为了她。</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://xheartx.com/2016/01/01/hello-world/</url>
+      <url>http://blog.xheartx.com/2016/01/01/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
