@@ -4,6 +4,86 @@
   
     
     <entry>
+      <title><![CDATA[Hexo+Github 搭建之路-进阶篇]]></title>
+      <url>http://xheartx.com/2016/01/10/Hexo-Github-Build-advanced-article/</url>
+      <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-01.png" alt=""></p>
+<h1 id="hexo双线部署到github和coding-实现全球快速访问"><a href="#hexo双线部署到github和coding-实现全球快速访问" class="headerlink" title="hexo双线部署到github和coding 实现全球快速访问"></a>hexo双线部署到github和coding 实现全球快速访问</h1><p>如果只把hexo托管在github，但是毕竟github是国外的，访问速度上还是有点慢，所以就有了部署到国内的coding，通过域名解析可以把国内流量的解析到Coding，国外的解析到Github(这里可以用DNSPod的免费服务)。</p>
+<a id="more"></a>
+<h2 id="注册Coding账户并建立项目"><a href="#注册Coding账户并建立项目" class="headerlink" title="注册Coding账户并建立项目"></a>注册Coding账户并建立项目</h2><p>github的托管详情，请看<a href="/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/">基础篇</a>。Coding托管的方法与github的类似，托管完成后，你可以手动删除Coding上的项目。具体如下：</p>
+<p>去<a href="https://coding.net" target="_blank" rel="external">Coding的官网</a>注册，在个人主页的<code>项目</code>中创建一个项目，最好创建与你账户名相同的项目。例如，我的账户名为xheart, 创建的项目名为xheart（大小写不区分）。</p>
+<h2 id="上传SSH文件"><a href="#上传SSH文件" class="headerlink" title="上传SSH文件"></a>上传SSH文件</h2><p>在Coding的个人主页的<code>账户</code>中，进入<code>SSH公钥</code>。添加你的公钥，如果你之前生成过，公钥在<code>C:\Users\你的用户名\.ssh\id_rsa.pub</code>。复制里面的内容在<code>SSH-RSA公钥内容</code>中即可。</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-03.png" alt=""></p>
+<p>打开<code>git bash</code>，输入</p>
+<pre><code>ssh -T git@git.coding.net
+</code></pre><p>进行测试，如果显示如下则SSH配置成功：</p>
+<pre><code>Hello ...! You&apos;ve conected to Coding.net by SSH successfully!
+</code></pre><h2 id="修改网站的配置文件"><a href="#修改网站的配置文件" class="headerlink" title="修改网站的配置文件"></a>修改网站的配置文件</h2><p>修改网站根目录下的配置文件<code>_config.yml</code>，找到<code>deploy</code>的设置处，改为如下：</p>
+<pre><code>deploy:
+  type: git
+  repo: 
+       github: https://xheartx@github.com/xheartx/xheartx.github.io.git
+       coding: git@git.coding.net:xheart/xheart.git
+  branch: master
+</code></pre><p>注意要改成你的项目地址。</p>
+<h2 id="将网站文件部署至Coding"><a href="#将网站文件部署至Coding" class="headerlink" title="将网站文件部署至Coding"></a>将网站文件部署至Coding</h2><p>在网站根目录下打开<code>git bash</code>，输入</p>
+<pre><code>hexo g -d
+</code></pre><p>进行网站文件的生成和部署。成功之后，进入你的Coding对应的项目中应该能看到网站文件。</p>
+<h2 id="配置Coding的Page服务"><a href="#配置Coding的Page服务" class="headerlink" title="配置Coding的Page服务"></a>配置Coding的Page服务</h2><p>进入你在Coding上的项目，点击左侧的<code>代码</code>可以看到<code>Coding Pages</code>服务。输入分支为<code>master</code>，点击开启服务。在自定义域名处填上你的网站域名，如下图所示：</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-04.png" alt=""></p>
+<hr>
+<h1 id="注册及绑定自己的域名地址"><a href="#注册及绑定自己的域名地址" class="headerlink" title="注册及绑定自己的域名地址"></a>注册及绑定自己的域名地址</h1><p>将hexo部署至github及Coding之后，可以通过github或者Coding分配的pages二级域名来访问博客，比如username.github.io。但是对于一个强迫症患者，一个爱折腾的人，怎么可以就这样满足了，当然是要有一个自己的个性域名了，通过将自己的博客绑定至自己购买的域名可以更加方便的访问，下面将介绍如何购买一个域名及将自定义域名绑定至github。</p>
+<h2 id="注册域名"><a href="#注册域名" class="headerlink" title="注册域名"></a>注册域名</h2><p>这里推荐<a href="https://www.namesilo.com/?rid=e509366fb" target="_blank" rel="external">namesilo</a>域名注册商，支付宝付款方便，赠送永久whois保护、免备案，赠送域名停靠业务，很多新鲜功能，免费给客户使用。不必再去godaddy这类国际域名商那里注册了，性价比不高。<br>详细教程请看：<a href="http://since1989.org/wordpress/namesilo-coupon-godaddy-domain-free.html" target="_blank" rel="external">namesilo免费注册账号、购买域名教程</a> ，输入优惠码还可优惠1美元。</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-02.png" alt=""></p>
+<blockquote>
+<p>提醒：</p>
+<ul>
+<li>一定不要注册.cn域名，一定不要在国内万网注册域名。原因我就不多说了，国内的环境你们懂的。</li>
+<li>域名注册首选.com ,其它的都是浮云。</li>
+</ul>
+</blockquote>
+<h2 id="DNS域名解析设置"><a href="#DNS域名解析设置" class="headerlink" title="DNS域名解析设置"></a>DNS域名解析设置</h2><p>域名解析推荐NDSPod国际版，NDSPod的域名解析服务中，提供根据线路进行不同的路由的功能是免费的，NDSPod国内版本目前只对国内线路做细分，没有海外线路的选择，所以不推荐，建议用NDSPod的国际版。</p>
+<p>操作流程：</p>
+<ul>
+<li><p>注册dnspod国际帐号<a href="https://www.dnspod.com/" target="_blank" rel="external">www.dnspod.com</a><br>域名服务商那里更改ns记录为dnspod国际版的nameserver，默认为</p>
+<p>  a.dnspod.com.<br>  b.dnspod.com.<br>  c.dnspod.com.</p>
+</li>
+<li>在dnspod添加域名解析：</li>
+</ul>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-05.png" alt=""></p>
+<blockquote>
+<p>注意：<br>A解析：只能填IP地址，IP地址如果换了的话就需要换解析记录<br>CNAME解析：解析到另一个域名，即使被指向的域名的ip发生变化，也不需要更改解析记录。<br>建议全都用CNAME解析，具体可参考我的设置。（由于我还添加了自己的二级域名，只看红框里的就行）<br>Value的地址后面一定要加.  ,比如：pages.coding.me. </p>
+</blockquote>
+<ul>
+<li>Github自定义域名需要在项目根目录下添加一个CNAME文件，文件内容为自定义域名。CNAME文件创建完之后扔到blog/source目录下即可 (不能直接扔到public下!!)。<br>CNAME文件设置的目的是，通过访问 MyGithub.github.io 可以跳转到你所注册的域名上。</li>
+<li>Coding需要在项目Coding Pages 服务中直接绑定自己的域名即可。</li>
+<li>DNS域名解析设置需要一定时间，请耐心等待。</li>
+</ul>
+<hr>
+<h1 id="使用七牛图床分流"><a href="#使用七牛图床分流" class="headerlink" title="使用七牛图床分流"></a>使用七牛图床分流</h1><p>本来图片放在本地的文件夹里也可以，但是github还是有存储空间限制的，而且这样网站加载也慢，所以用云存储商的云服务来作图床还可以加速，图片也不会丢。其实还有很多免费图床网站可以用，但是七牛的口碑比较哦好，比较稳定。所以决定用七牛了。</p>
+<h2 id="注册七牛账号"><a href="#注册七牛账号" class="headerlink" title="注册七牛账号"></a>注册七牛账号</h2><p><a href="https://portal.qiniu.com/signup?code=3lmwk5kdtr1oy" target="_blank" rel="external">点此注册</a>，官网注册很简单，都是中文。没有账先去注册，实名认证之后就可以使用云存储服务了。</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-06.png" alt=""></p>
+<p> <strong>注意：</strong> 一定要选公开空间，不然别人访问不到</p>
+<h2 id="七牛云插件上传"><a href="#七牛云插件上传" class="headerlink" title="七牛云插件上传"></a>七牛云插件上传</h2><ul>
+<li><p>推荐chrome里七牛云存储的 <a href="https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc" target="_blank" rel="external">qiniu upload files</a> 插件</p>
+<blockquote>
+<p>七牛云插件,像使用桌面系统一样管理你的七牛云空间<br>支持拖拽上传，批量操作，文件处理等功能</p>
+</blockquote>
+</li>
+<li><p>安装完成后，填写表单,内容七牛网站密匙管理里都有。</p>
+</li>
+<li>配置完成后直接拖动图片进去即可。</li>
+</ul>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-07.png" alt=""></p>
+<h2 id="图片压缩处理"><a href="#图片压缩处理" class="headerlink" title="图片压缩处理"></a>图片压缩处理</h2><ul>
+<li>使用七牛图床，免费账户有10G空间和每个月10G流量，如果不搞清楚 容量 和 流量 的区别，肆无忌惮的用，早晚会用爆的。</li>
+<li>强烈建议使用图片压缩工具<a href="https://tinypng.com/" target="_blank" rel="external">tinypng</a>压缩后再上传到七牛，上传图片必须限制在 200 k 以内。(放心一般截图压缩一下也就100k左右)</li>
+<li>使用起来很简单，同样也可以直接拖进去，压缩能力很强大，基本看不出失真。</li>
+</ul>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-10-08.png" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo+Github 搭建之路-基础篇]]></title>
       <url>http://xheartx.com/2016/01/06/hexo-personal-blog-from-Octopress-to-Hexo/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/hexo-common.png" alt=""></p>
@@ -11,8 +91,7 @@
 <p>如果你对默认配置满意，只需几个命令便可秒搭一个hexo。<br>如果你跟我一样喜欢折腾下，30分钟也足够个性化。<br>如果你过于喜欢折腾，可以折腾个把星期，尽情的玩。</p>
 </blockquote>
 <p>就是看到这段话，让我决定落脚在Hexo和Githu上，Hexo是一个快速、简洁且高效的博客框架，而Github是一个免费的代码托管工具，利用Github Page可以免费创建一个静态网站。</p>
-<p>其实最后只需要几个简单命令，你就可以完成一切。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n #写文章</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d #部署 # 可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure></p>
-<p>但是在那之前，却不是我想的那么简单，下面逐步介绍，进入正题。</p>
+<p>其实最后只需要几个简单命令，你就可以完成一切。但是在那之前，却不是我想的那么简单，下面逐步介绍，进入正题。</p>
 <a id="more"></a>
 <h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><p>安装Node<br>到<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>官网下载相应平台的最新版本，一路安装即可。<br>安装Git<br>到<a href="https://git-scm.com/download/win" target="_blank" rel="external">Git</a>官网，安装过程网上一堆，很简单。</p>
 <h1 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h1><p>如果已经注册Github，可跳过此步骤。否则，访问<a href="https://github.com/" target="_blank" rel="external">Github官网</a>进行注册，下面假设你注册Github账号名为MyGithub。</p>
