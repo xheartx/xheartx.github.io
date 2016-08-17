@@ -4,6 +4,96 @@
   
     
     <entry>
+      <title><![CDATA[Google 搜索技巧]]></title>
+      <url>http://blog.xheartx.com/2016/01/23/googleSearchSkill/</url>
+      <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-23-01.png" alt="Google 搜索"></p>
+<p>作为一个IT工程师或程序员，熟悉下面的搜索技巧很必要。当你熟悉使用这些技巧后，就会明白百度和google不是一个级别的。百度永远超越不了google。</p>
+<blockquote>
+<p>使用的前提：你进的去 → <a href="https://www.google.com.hk/" target="_blank" rel="external">Google.com</a></p>
+</blockquote>
+<a id="more"></a>
+<h1 id="搜索运算符"><a href="#搜索运算符" class="headerlink" title="搜索运算符"></a>搜索运算符</h1><h2 id="双引号（””）"><a href="#双引号（””）" class="headerlink" title="双引号（””）"></a>双引号（””）</h2><p>如果你很明确你想要找什么，给你的搜索关键词加上双引号，这样，搜索引擎会严格地按照你输入的内容查找相关的结果。甚至，比如你输入的是 “易烊千玺 最帅” 这样的关键词，Google 也会严格地按照关键词的先后顺序查找网页内容，只有「易烊千玺」先出现，「最帅」后出现的内容才会出现在结果中，而像「最帅的是易烊千玺」这样的结果则不会出现。</p>
+<h2 id="星号（-）"><a href="#星号（-）" class="headerlink" title="星号（*）"></a>星号（*）</h2><p>如果你想搜索的内容中，有一些部分你不能完全确定，比如最常见的情况，在路边听到的某首歌，只记住了零星的歌词，或者是听别人口头跟你说的东西，但是东北腔、福建腔太重时，你可能没听懂一些关键词，这时候星号就派上用场了。</p>
+<p>还记得当年红遍大江南北的「骑李湘」吗？你感觉你听到了一句「爽歪的麻雀在电线杆上裸睡」，其实如果你搜索「 * 的麻省在电线杆上 * 」还是能找到正确结果的。</p>
+<h2 id="短横（-）"><a href="#短横（-）" class="headerlink" title="短横（-）"></a>短横（<strong>-</strong>）</h2><p>比如，如果你是苹果日报的忠实读者，却不知道从哪一天起，搜索「苹果」铺天盖地的都是 iPhone 和苹果公司的结果，这时候该怎么报？试试看「苹果 <strong>-</strong> 手机」，这样就可以找到只含有「苹果」，但绝不含「手机」的结果了。</p>
+<h1 id="高级搜索"><a href="#高级搜索" class="headerlink" title="高级搜索"></a>高级搜索</h1><h2 id="site"><a href="#site" class="headerlink" title="site"></a>site</h2><p>通过添加 site 关键词，你可以指定从哪个网站上搜索你想要的结果。少数派的站内搜索，其实只能针对标题中的关键词进行搜索，而正文中或者在 Matrix 中如果出现过相关的内容，则搜索不到。</p>
+<p>比如我们经常会在网盘查东西，在查找文件时，想看看咋在百度网盘里有没有？不妨试试用 Google 搜索「文件 site:pan.baidu.com」。</p>
+<h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><p>“link”语法返回所有链接到某个URL地址的网页。</p>
+<p>示例：搜索所有含指向华军软件园“www.newhua.com”链接的网页。<br>搜索：“link:www.newhua.com”</p>
+<blockquote>
+<p>注意：“link”不能与其他语法相混合操作，所以“link:”后面即使有空格，也将被GOOGLE忽略。</p>
+</blockquote>
+<h2 id="inurl"><a href="#inurl" class="headerlink" title="inurl"></a>inurl</h2><p>inurl语法返回的网页链接中包含第一个关键字，后面的关键字则出现在链接中或者网页文档中。有很多网站把某一类具有相同属性的资源名称显示在目录名称或者网页名称中，比如“MP3”、“GALLARY”等，于是，就可以用INURL语法找到这些相关资源链接，然后，用第二个关键词确定是否有某项具体资料。INURL语法和基本搜索语法的最大区别在于，前者通常能提供非常精确的专题资料。</p>
+<p>示例：查找MIDI曲“沧海一声笑”。<br>搜索：“inurl:midi 沧海一声笑”</p>
+<p>示例：查找微软网站上关于windows2000的安全课题资料。<br>搜索：“inurl:security windows2000 site:microsoft.com”</p>
+<blockquote>
+<p>注意：“inurl:”后面不能有空格，GOOGLE也不对URL符号如“/”进行搜索。GOOGLE对“cgi-bin/phf”中的“/”当成空格处理。</p>
+</blockquote>
+<h2 id="allinurl"><a href="#allinurl" class="headerlink" title="allinurl"></a>allinurl</h2><p>allinurl语法返回的网页的链接中包含所有查询关键字。这个查询的对象只集中于网页的链接字符串。</p>
+<p>示例：查找可能具有PHF安全漏洞的公司网站。通常这些网站的CGI-BIN目录中含有PHF脚本程序（这个脚本是不安全的），表现在链接中就是“域名/cgi-bin/phf”。<br>语法：“allinurl:”cgi-bin” phf +com”</p>
+<p>allintitle和intitle的用法类似于上面的allinurl和inurl，只是后者对URL进行查询，而前者对网页的标题栏进行查询。网页标题，就是HTML标记语言title中之间的部分。网页设计的一个原则就是要把主页的关键内容用简洁的语言表示在网页标题中。因此，只查询标题栏，通常也可以找到高相关率的专题页面。</p>
+<p>示例：查找日本明星藤原纪香的照片集。<br>搜索：“intitle:藤原纪香 写真”</p>
+<h2 id="related"><a href="#related" class="headerlink" title="related"></a>related</h2><p>related用来搜索结构内容方面相似的网页。例：搜索所有与中文新浪网主页相似的页面（如网易首页，搜狐首页，中华网首页等），“related:www.sina.com.cn/index.shtml”。</p>
+<h2 id="cache"><a href="#cache" class="headerlink" title="cache"></a>cache</h2><p>cache用来搜索GOOGLE服务器上某页面的缓存，这个功能同“网页快照”，通常用于查找某些已经被删除的死链接网页，相当于使用普通搜索结果页面中的“网页快照”功能。</p>
+<h2 id="info"><a href="#info" class="headerlink" title="info"></a>info</h2><p>info用来显示与某链接相关的一系列搜索，提供cache、link、related和完全包含该链接的网页的功能。</p>
+<p>示例：查找和新浪首页相关的一些资讯。<br>搜索：“info:www.sina.com.cn”</p>
+<h1 id="其它搜索技巧"><a href="#其它搜索技巧" class="headerlink" title="其它搜索技巧"></a>其它搜索技巧</h1><h2 id="强制搜索"><a href="#强制搜索" class="headerlink" title="强制搜索"></a>强制搜索</h2><p>GOOGLE对一些网路上出现频率极高的词（主要是英文单词），如“i”、“com”，以及一些符号如“*”、“.”等，作忽略处理，如果用户必须要求关键字中包含这些常用词，就要用强制语法“<strong>+</strong>”。</p>
+<p>示例：搜索包含“Who am I ?”的网页。如果用“”who am i ?””，“Who”、“I”、“?”会被省略掉，搜索将只用“am”作关键字，所以应该用强制搜索。<br>搜索：“”+who +am +i””</p>
+<blockquote>
+<p>注意：英文符号（如问号，句号，逗号等）无法成为搜索关键字，加强制也不行。</p>
+</blockquote>
+<h2 id="indexof-inurl"><a href="#indexof-inurl" class="headerlink" title="indexof / inurl"></a>indexof / inurl</h2><p>在搜索框上输入“inurl:pdf ecommerce”<br>再按搜索你就可以找到关于电子商务（ECOMMERCE）的PDF文档。</p>
+<p>在搜索框上输入：“indexof/”inurl:lib<br>再按搜索你将进入许多图书馆，并且一定能下载自己喜欢的书籍。</p>
+<p>在搜索框上输入：“indexof/”cnki<br>再按搜索你就可以找到许多图书馆的CNKI、VIP、超星等入口！</p>
+<p>在搜索框上输入：“indexof/”ppt<br>再按搜索你就可以突破网站入口下载powerpint作品！</p>
+<p>在搜索框上输入：“indexof/”mp3<br>再按搜索你就可以突破网站入口下载mp3、rm等影视作品！</p>
+<p>在搜索框上输入：“indexof/”swf<br>再按搜索你就可以突破网站入口下载flash作品！</p>
+<p>在搜索框上输入：“indexof/”要下载的软件名<br>再按搜索你就可以突破网站入口下载软件！</p>
+<blockquote>
+<p>注意引号应是英文的！ 我使用最多的是inurl:参数</p>
+</blockquote>
+<h2 id="用Google看世界"><a href="#用Google看世界" class="headerlink" title="用Google看世界!"></a>用Google看世界!</h2><p>用Google看世界!!! 只要你在GOOGLE里输入特殊的关键字,就可以搜到数千个摄象头的IP地址!通过他你就可以看到其所摄的实时影象!!</p>
+<p>在Google里输入</p>
+<p>inurl:”viewerframe?mode=”</p>
+<p>随便打开一个,然后按提示装一个插件,就可以看到了!!!</p>
+<h2 id="黑客的Google搜索技巧"><a href="#黑客的Google搜索技巧" class="headerlink" title="黑客的Google搜索技巧"></a>黑客的Google搜索技巧</h2><p>大家都知道，Google毫无疑问是当今世界上最强大的搜索引擎。然而，在黑客手中，它也是一个秘密武器，它能搜索到一些你意想不到的信息。我把他们进行了简单的总结不是希望您利用他去攻击别人的网站，而是利用这些技巧去在浩如烟海的网络信息中，来个大海捞针，寻找到对您有用的信息。</p>
+<p>如果您是一名普通网民，您可以使用黑客的技巧扩大自己的视野，提高自己的检索效率；如果您是一名网管，请您赶快看看您的网站是否做好了对下面黑客探测手 段的防范措施，如果没有就赶快来个亡羊补牢，毕竟隐患胜于明火，防范胜于救灾.</p>
+<p>搜索URL</p>
+<p>比如我们提交这种形式：passwd.txtsite:virtualave.net</p>
+<p>看到了什么？是不是觉得太不可思议了！有很多基于CGI/PHP/ASP类型的留言板存在这种问题。有时我们得到密码甚至还是明码的！管理员或许太不负责了，或许安全防范的意识太差了，如果你是网络管理员，赶快检查一下不要让恶意攻击者捡了便宜。不要太相信DES加密，即使我们的密码经过DES加密的密 码，黑客们还是可以通过许多破解软件来搞定。</p>
+<p>这次我们能得到包含密码的文件。“site:virtualave.net”意思是只搜索virutalave.net的URL。virutalave.net是一个网络服务器提供商。</p>
+<p>搜索特定的文件类型</p>
+<p>比如你想指定一种文件的类型，可以提交如下形式：</p>
+<p>filetype:.docsite:.milclassified</p>
+<p>这个就是搜索军方的资料，你可以自定义搜索。</p>
+<h1 id="Google的特殊功能"><a href="#Google的特殊功能" class="headerlink" title="Google的特殊功能"></a>Google的特殊功能</h1><h2 id="查询电话号码"><a href="#查询电话号码" class="headerlink" title="查询电话号码"></a>查询电话号码</h2><p>Google的搜索栏中最新加入了电话号码和美国街区地址的查询信息。</p>
+<p>个人如想查找这些列表，只要填写姓名，城市和省份。</p>
+<p>如果该信息为众人所知，你就会在搜索结果页面的最上方看到搜索的电话和街区地址</p>
+<p>你还可以通过以下任何一种方法找到该列表：</p>
+<p>名字（或首位大写字母），姓，电话地区号</p>
+<p>名字（或首位大写字母），姓，邮递区号</p>
+<p>名字（或首位大写字母），姓，城市（可写州）</p>
+<p>名字（或首位大写字母），姓，州</p>
+<p>电话号码，包括区号</p>
+<p>名字，城市，州</p>
+<p>名字，邮递区号</p>
+<h2 id="随手查股票"><a href="#随手查股票" class="headerlink" title="随手查股票　"></a>随手查股票　</h2><p>Google 可以帮你查 A 股、港股、美股等各种股票，你只需要输入股票代码，不管是像 A 股的数字代码「600280」，还是美股中的爸爸「BABA」，股价就会实时闪现。</p>
+<p>用Google查找股票和共有基金信息，只要输入一个或多个NYSE，NASDAQ，AMEX或</p>
+<p>共有基金的股票行情自动收录机的代码，也可以输入在股市开户的公司名字。</p>
+<p>如果Google识别出你查询的是股票或者共有基金，它回复的链接会直接连到高质量的金融信息提供者提供的股票和共有基金信息。</p>
+<p>在你搜索结果的开头显示的是你查询的股市行情自动收录器的代码。如果你要查找一家公司的名字（比如，INTEL），请查看“股票报价”在Google搜索结果的金融栏里会有那个公司的主页的链接（比如， www. INTEL. COM）。</p>
+<p>Google是以质量为基础来选择和决定金融信息提供者的，包括的因素有下载速度，用户界面及其功能。</p>
+<h2 id="随手计算器"><a href="#随手计算器" class="headerlink" title="随手计算器　"></a>随手计算器　</h2><p>想打开 Windows 自带的计算器，还要去开始菜单里苦苦找寻？不如直接在 Google 搜索栏输入「计算器」，一个简易的科学计算器就蹦出来啦。</p>
+<p>如果你直接搜索一些函数表达式，Google 甚至可以用图形帮你画出来</p>
+<h2 id="单位换算"><a href="#单位换算" class="headerlink" title="单位换算　"></a>单位换算　</h2><p>日常生活里，总是会遇到各类换算，如面积、温度、汇率、时间等等，你可以直接试着输入你想换算的两个量纲，Google 会自动提供换算功能。</p>
+<h2 id="查单词、做翻译"><a href="#查单词、做翻译" class="headerlink" title="查单词、做翻译　"></a>查单词、做翻译　</h2><p>在搜索关键词前加上「定义」或「翻译」，Google 就可以帮你查单词或做翻译。不过，如果 Google 使用的是中文语言，查单词会直接使用 wiki，这样会导致无论是释义还是词库都非常不完备。推荐使用英文语言的 Google 并配合「define 关键词」，无论是释义还是词库都更加完善。</p>
+<h2 id="Google-学术搜索"><a href="#Google-学术搜索" class="headerlink" title="Google 学术搜索　"></a>Google 学术搜索　</h2><p>相信在外留学的人，没有人不用 scholar.google.com，不管你是要写论文还是要查证一些权威资料，Google 的学术搜索都是你的最佳助手。你可以通过它找到各类论文、引文、出处及作者的相关信息，部分论文甚至提供在线的全文查看。</p>
+<p>Google 学术搜索不仅最大可能地索引了全球的论文期刊，其搜索结果的排序，也是按照论文的相关度、发表期刊、作者、影响因子等权重进行排名的。</p>
+<p>此外，它还有一个非常贴心好用的小功能：一键帮你生成引用，你可以很方便地粘贴到自己的论文脚注中。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Win8.1 Office2016 Office2013 电话激活教程]]></title>
       <url>http://blog.xheartx.com/2016/01/20/win8-active-course/</url>
       <content type="html"><![CDATA[<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-20-01.png" alt="Win8.1 Office2016 Office2013 电话激活教程"></p>
@@ -546,13 +636,13 @@ Sitemap: http://www.jeyzhang.com/baidusitemap.xml
       <title><![CDATA[Hello World]]></title>
       <url>http://blog.xheartx.com/2016/01/01/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a> <a id="more"></a></p>
+<h2 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     </entry>
