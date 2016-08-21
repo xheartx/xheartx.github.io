@@ -1,0 +1,907 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,CSS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="自用笔记，不做详解，仅供参考。在此记录学习CSS中整理摘抄的一些笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 笔记">
+<meta property="og:url" content="http://blog.xheartx.com/2016/03/25/2016-03-25-web-CssNotes/index.html">
+<meta property="og:site_name" content="X.Heart Blog">
+<meta property="og:description" content="自用笔记，不做详解，仅供参考。在此记录学习CSS中整理摘抄的一些笔记。">
+<meta property="og:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-03-25-01.png">
+<meta property="og:updated_time" content="2016-08-21T19:27:25.543Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 笔记">
+<meta name="twitter:description" content="自用笔记，不做详解，仅供参考。在此记录学习CSS中整理摘抄的一些笔记。">
+<meta name="twitter:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-03-25-01.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.xheartx.com/2016/03/25/2016-03-25-web-CssNotes/"/>
+
+  <title> CSS 笔记 | X.Heart Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-80671416-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">X.Heart Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS 笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T18:29:00+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/25/2016-03-25-web-CssNotes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/2016-03-25-web-CssNotes/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-03-25-01.png" alt="CSS 笔记"></p>
+<blockquote>
+<p>自用笔记，不做详解，仅供参考。在此记录学习CSS中整理摘抄的一些笔记。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="CSS动画"><a href="#CSS动画" class="headerlink" title="CSS动画"></a>CSS动画</h2><h3 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h3><p>Internet Explorer 9 以及更早版本的浏览器不支持 transition 属性</p>
+<p>transition 属性是一个简写属性，用于设置四个过渡属性：</p>
+<ul>
+<li>transition-property    规定设置过渡效果的 CSS 属性的名称。</li>
+<li>transition-duration    规定完成过渡效果需要多少秒或毫秒。</li>
+<li>transition-timing-function    规定速度效果的速度曲线。</li>
+<li>transition-delay    定义过渡效果何时开始。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transition-duration: 0.5s;</span><br><span class="line">transition-duration: 0.5s;</span><br><span class="line"></span><br><span class="line">transition: property duration timing-function delay;</span><br><span class="line"></span><br><span class="line">transition:width 2s;</span><br><span class="line">/* Firefox 4 */</span><br><span class="line">-moz-transition:width 2s;</span><br><span class="line">/* Safari and Chrome */</span><br><span class="line">-webkit-transition:width 2s;</span><br><span class="line">/* Opera */</span><br><span class="line">-o-transition:width 2s;</span><br></pre></td></tr></table></figure>
+<p>input:focus, select, textarea {<br>  outline: none;<br>}</p>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">/*首字母大写*/</span><br><span class="line">text-transform:capitalize;</span><br><span class="line"></span><br><span class="line">/*属性允许您以确切的方式定义适应某个区域的具体内容*/</span><br><span class="line">box-sizing:border-box;</span><br><span class="line">/* Firefox */</span><br><span class="line">-moz-box-sizing:border-box;</span><br><span class="line">/* Safari */</span><br><span class="line">-webkit-box-sizing:border-box;</span><br><span class="line"></span><br><span class="line">/* 清除所有a标签在点击时出现的特效：*/</span><br><span class="line">a&#123;</span><br><span class="line">-webkit-tap-highlight-color:rgba(255,0,0,0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 内容将在边界内换行 */</span><br><span class="line">word-wrap: break-word;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">iframe无法全屏显示，html，设置高度100%。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CSS a标签，移动端显示方框</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.f-img-light-wrap &#123;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	position: relative</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.f-img-light-wrap:after &#123;</span><br><span class="line">	content: &apos;&apos;;</span><br><span class="line">	height: 100%;</span><br><span class="line">	width: 100px;</span><br><span class="line">	transform: skewX(-25deg) translate3d(0,0,0);</span><br><span class="line">	background: -moz-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);</span><br><span class="line">	background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,.3)),color-stop(100%,rgba(255,255,255,0)));</span><br><span class="line">	background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);</span><br><span class="line">	background: -o-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3)50%,rgba(255,255,255,0) 100%);</span><br><span class="line">	background: linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);</span><br><span class="line">	position: absolute;</span><br><span class="line">	left: -160%;</span><br><span class="line">	top: 0;</span><br><span class="line">	z-index: 9</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.f-img-light-wrap:hover:after &#123;</span><br><span class="line">	transition: left 1s ease-in-out;</span><br><span class="line">	left: 160%</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;http://sandbox.runjs.cn/show_square/587&quot; allowtransparency=&quot;true&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;&quot;&gt;&lt;/iframe&gt;</span><br><span class="line"></span><br><span class="line">iframe内联框架</span><br><span class="line">&lt;iframe src=&quot;http://sandbox.runjs.cn/show_square/611&quot; allowtransparency=&quot;true&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;&quot;&gt;&lt;/iframe&gt;</span><br><span class="line"></span><br><span class="line">scrolling</span><br><span class="line">规定是否在 iframe 中显示滚动条。</span><br><span class="line"></span><br><span class="line">name</span><br><span class="line">规定 iframe 的名称。</span><br><span class="line">name=&quot;main&quot;</span><br><span class="line">&lt;a href=&quot;https://www.baidu.com/&quot; target=&quot;main&quot;&gt;评论管理1&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="动画transform"><a href="#动画transform" class="headerlink" title="动画transform"></a>动画transform</h3><h4 id="2D"><a href="#2D" class="headerlink" title="2D"></a>2D</h4><p>定位translate</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:translate(X,Y);</span><br><span class="line"></span><br><span class="line">	设置：XY轴的距离，12px，12%，-12px</span><br><span class="line">	常用浏览器兼容：</span><br><span class="line">	/* Safari 和 Chrome */</span><br><span class="line">	-webkit-transform:translate(X,Y);</span><br><span class="line">	/* Firefox */</span><br><span class="line">	-moz-transform:translate(X,Y);</span><br><span class="line">	/* IE 360 */</span><br><span class="line">	-o-transform:translate(X,Y);</span><br><span class="line">	/* Opera */</span><br><span class="line">	-ms-transform:translate(X,Y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>旋转rotate</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:rotate(180deg);/* 180度 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>变化scale</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:scale(1,2);/* 宽度、高度 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>倾斜skew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:skew(1,2);/* X轴角度、 Y轴角度*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>矩阵matrix</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:matrix();/*  */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h4><p>旋转rotateX/rotateY</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	transform:rotateX(100deg);/* 100度 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动画过渡效果"><a href="#动画过渡效果" class="headerlink" title="动画过渡效果"></a>动画过渡效果</h3><p>transition</p>
+<p>Internet Explorer 10、Firefox、Chrome 以及 Opera 支持 transition 属性。<br>Safari 需要前缀 -webkit-。<br>注释：Internet Explorer 9 以及更早的版本，不支持 transition 属性。<br>注释：Chrome 25 以及更早的版本，需要前缀 -webkit-。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	width: 100px;</span><br><span class="line">	height: 100px;</span><br><span class="line">	background-color: blue;</span><br><span class="line">	transition: width</span><br><span class="line">	transition-delay: 2s;/* 延时执行 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动画效果animation"><a href="#动画效果animation" class="headerlink" title="动画效果animation"></a>动画效果animation</h3><p>浏览器兼容性：<br>Internet Explorer 10、Firefox 以及 Opera 支持 @keyframes 规则和 animation 属性。<br>Chrome 和 Safari 需要前缀 -webkit-。<br>注释：Internet Explorer 9，以及更早的版本，不支持 @keyframe 规则或 animation 属性。</p>
+<p>创建规则动画：<br>规定动画时间、规定动画名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.div&#123;</span><br><span class="line">	animation: name 5s infinite alternate;</span><br><span class="line">	/* infinite alternate */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes name&#123;</span><br><span class="line">	0%&#123;</span><br><span class="line">		background-color：#FFF;</span><br><span class="line">	&#125;</span><br><span class="line">	25%&#123;</span><br><span class="line">		background-color：#FFF;</span><br><span class="line">	&#125;</span><br><span class="line">	50%&#123;</span><br><span class="line">		background-color：#FFF;</span><br><span class="line">	&#125;</span><br><span class="line">	100%&#123;</span><br><span class="line">		background-color：#FFF;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes myfirst</span><br><span class="line">&#123;</span><br><span class="line">	from &#123;background:red;&#125;</span><br><span class="line">	to &#123;background:yellow;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">@keyframes	规定动画</span><br><span class="line"></span><br><span class="line">animation</span><br><span class="line">所有动画属性的简写属性，除了 animation-play-state 属性</span><br><span class="line">animation: name duration timing-function delay iteration-count direction;</span><br><span class="line"></span><br><span class="line">animation-name</span><br><span class="line">规定 @keyframes 动画的名称</span><br><span class="line"></span><br><span class="line">animation-duration</span><br><span class="line">规定动画完成一个周期所花费的秒或毫秒。默认是 0</span><br><span class="line"></span><br><span class="line">animation-timing-function</span><br><span class="line">规定动画的速度曲线。默认是 &quot;ease&quot;</span><br><span class="line"></span><br><span class="line">	linear</span><br><span class="line">	动画从头到尾的速度是相同的</span><br><span class="line"></span><br><span class="line">	ease</span><br><span class="line">	默认。动画以低速开始，然后加快，在结束前变慢</span><br><span class="line"></span><br><span class="line">	ease-in</span><br><span class="line">	动画以低速开始</span><br><span class="line"></span><br><span class="line">	ease-out</span><br><span class="line">	动画以低速结束</span><br><span class="line"></span><br><span class="line">	ease-in-out</span><br><span class="line">	动画以低速开始和结束</span><br><span class="line"></span><br><span class="line">	cubic-bezier(n,n,n,n)</span><br><span class="line">	在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</span><br><span class="line"></span><br><span class="line">steps(n,[ start | end ] ]?)这个阶梯函数，这个函数可以把动画平均划分为基本相等的，</span><br><span class="line">这个n是一个自然数，意思就是把一个动画平均分成n等分，直到平均地走完这个动画，</span><br><span class="line">这个要跟linear区别开来，因为linear是把动画作为一个整体，中间没有断点，而steps是把动画分段平均执行开来。</span><br><span class="line"></span><br><span class="line">step-start等同于steps(1,start)，动画分成1步，动画执行时为开始左侧端点的部分为开始；</span><br><span class="line">step-end等同于steps(1,end)：动画分成一步，动画执行时以结尾端点为开始，默认值为end。</span><br><span class="line"></span><br><span class="line">animation-delay</span><br><span class="line">规定动画何时开始。默认是 0数值</span><br><span class="line"></span><br><span class="line">animation-iteration-count</span><br><span class="line">规定动画被播放的次数。默认是 &quot;1&quot;数值、&quot;infinite&quot;无限次播放</span><br><span class="line"></span><br><span class="line">animation-direction</span><br><span class="line">规定动画是否在下一周期逆向地播放。默认是 &quot;normal&quot;正常播放、&quot;alternate&quot;动画应该轮流反向播放</span><br><span class="line"></span><br><span class="line">animation-play-state</span><br><span class="line">规定动画是否正在运行或暂停。默认是 &quot;running&quot;正在运行的动画、&quot;paused&quot;暂停动画</span><br><span class="line"></span><br><span class="line">animation-fill-mode</span><br><span class="line">规定对象动画时间之外的状态</span><br></pre></td></tr></table></figure>
+<h3 id="CSS多列"><a href="#CSS多列" class="headerlink" title="CSS多列"></a>CSS多列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">column-count</span><br><span class="line">多列的个数</span><br><span class="line">column-gap</span><br><span class="line">每一列间隔距离</span><br><span class="line">column-rule</span><br><span class="line">每一列间隔线</span><br></pre></td></tr></table></figure>
+<h3 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h3><p>:last-child</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/20/2016-03-20-web-HtmlNotes/" rel="next" title="HTML 笔记">
+                <i class="fa fa-chevron-left"></i> HTML 笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/02/2016-04-02-WebFrontRule/" rel="prev" title="Web前端开发规范手册">
+                Web前端开发规范手册 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/25/2016-03-25-web-CssNotes/"
+           data-title="CSS 笔记" data-url="http://blog.xheartx.com/2016/03/25/2016-03-25-web-CssNotes/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="X.Heart" />
+          <p class="site-author-name" itemprop="name">X.Heart</p>
+          <p class="site-description motion-element" itemprop="description">为什么坚持，想想当初...</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xstrayx" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/xx546593797" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=xx546593797@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://xheartx.com" title="个人主页" target="_blank">个人主页</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ishadowsocks.net/" title="科学上网" target="_blank">科学上网</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS动画"><span class="nav-number">1.</span> <span class="nav-text">CSS动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transition"><span class="nav-number">1.1.</span> <span class="nav-text">transition</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number"></span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动画transform"><span class="nav-number">0.1.</span> <span class="nav-text">动画transform</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2D"><span class="nav-number">0.1.1.</span> <span class="nav-text">2D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3D"><span class="nav-number">0.1.2.</span> <span class="nav-text">3D</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画过渡效果"><span class="nav-number">0.2.</span> <span class="nav-text">动画过渡效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画效果animation"><span class="nav-number">0.3.</span> <span class="nav-text">动画效果animation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS多列"><span class="nav-number">0.4.</span> <span class="nav-text">CSS多列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS选择器"><span class="nav-number">0.5.</span> <span class="nav-text">CSS选择器</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X.Heart</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xheartx"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
