@@ -5,6 +5,7 @@ return!0}function Q(a,b,d,e){if(m.acceptData(a)){var f,g,h=m.expando,i=a.nodeTyp
 
 $( document ).ready(function() {
     $(".bj").css({"opacity":"0.3","filter":"alpha(opacity=30)"});
+<<<<<<< HEAD
 });
 
 (function(){
@@ -19,3 +20,6 @@ $( document ).ready(function() {
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+=======
+});
+>>>>>>> 2979d93a68dd523e624476df642d186aab38804e
