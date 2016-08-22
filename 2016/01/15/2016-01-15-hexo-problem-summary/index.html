@@ -91,7 +91,10 @@
 <meta property="og:site_name" content="X.Heart Blog">
 <meta property="og:description" content="生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！">
 <meta property="og:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-01.png">
-<meta property="og:updated_time" content="2016-08-04T15:11:35.766Z">
+<meta property="og:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-02.png">
+<meta property="og:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-03.png">
+<meta property="og:image" content="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-04.png">
+<meta property="og:updated_time" content="2016-08-22T04:56:45.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 问题汇总">
 <meta name="twitter:description" content="生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！">
@@ -365,16 +368,36 @@
 <blockquote class="blockquote-center"><br> <strong>生命在于折腾，不懂的善用搜索，来享受研究的乐趣吧！</strong><br><br></blockquote>
 
 <a id="more"></a>
-<h1 id="关于上传文件到github的方法"><a href="#关于上传文件到github的方法" class="headerlink" title="关于上传文件到github的方法"></a>关于上传文件到github的方法</h1><h2 id="首次提交"><a href="#首次提交" class="headerlink" title="首次提交"></a>首次提交</h2><p>在本地根目录打开<code>git bash</code> ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<h1 id="关于上传文件到github的方法"><a href="#关于上传文件到github的方法" class="headerlink" title="关于上传文件到github的方法"></a>关于上传文件到github的方法</h1><h2 id="先建立仓库"><a href="#先建立仓库" class="headerlink" title="先建立仓库"></a>先建立仓库</h2><p>第一步的话看一般的提示就知道了，在github新建一个repository（谷歌可以解决），都是可视化的界面操作，所以难度不大。或者看这里：<a href="https://help.github.com/articles/create-a-repo" target="_blank" rel="external">https://help.github.com/articles/create-a-repo</a> 这是官方help，虽然是英文的，但是基本都是图和代码，所以很容易读懂。</p>
+<p>在github首页的右上角，点击new repository。</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-02.png" alt="new repository"></p>
+<p>进入新建仓库的界面</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-03.png" alt="new repository"></p>
+<p>　填一下仓库名称，Initialize this repository with a README是可选的，不过本人建议最好选上，可以在后面省一个步骤。填好之后，点Create repository就行了。</p>
+<p>##克隆仓库 ##</p>
+<p>第二步开始就基本进入命令行模式了，不过要先从github上下载命令行工具。下载地址：<a href="http://windows.github.com/" target="_blank" rel="external">http://windows.github.com/</a></p>
+<p>　　然后进行简单的安装之后，会在桌面上创建两个图标，GitHub和Git Shell，GitHub是图形界面，Git Shell是命令行模式，而且默认的Git仓库是建在C盘的，个人建议要把路径重设下。</p>
+<p>　　点开Git Shell，进入命令行。首先我们先要把GitHub上的我们新建的仓库clone下来，为了演示，我在GitHub上新建了一个名称为myRepoForBlog的git。</p>
+<p>　　在初始化版本库之前，先要确认认证的公钥是否正确，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>　正确地结果如下：　</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Warning: Permanently added &apos;github.com,207.97.227.239&apos; (RSA) to the list of known hosts.   </span><br><span class="line">Hi findingsea! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>上面的地址可以在如下界面找到：</p>
+<p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-04.png" alt="new repository"></p>
+<p>clone成功如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &apos;myRepoForBlog&apos;...</span><br><span class="line">　　Warning: Permanently added &apos;github.com,207.97.227.239&apos; (RSA) to the list of known hosts.</span><br><span class="line">　　remote: Counting objects: 3, done.</span><br><span class="line">　　remote: Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">　　Receiving objects: 100% (3/3), done.</span><br></pre></td></tr></table></figure>
+<h2 id="上传README-md文件"><a href="#上传README-md文件" class="headerlink" title="上传README.md文件"></a>上传README.md文件</h2><p>这个时候，我们的GitHub文件夹下就多了一个myRepoForBlog文件夹，进入文件夹目录，对仓库进行初始化，如果我们之前没有勾选创建README，则要先创建README.md文件，不然上传文件会报错。如果在第一步就勾选过了 <strong>Initialize this repository with a README</strong> ,则可以直接进入第四步.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">　　touch README.md</span><br><span class="line">　　git add README.md</span><br><span class="line">　　git commit -m &apos;first_commit&apos;</span><br><span class="line">　　git remote add origin https://github.com/findingsea/myRepoForBlog.git</span><br><span class="line">　　git push origin master</span><br></pre></td></tr></table></figure>
+<h2 id="首次提交"><a href="#首次提交" class="headerlink" title="首次提交"></a>首次提交</h2><p>在本地根目录打开<code>git bash</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <h2 id="提交更新"><a href="#提交更新" class="headerlink" title="提交更新"></a>提交更新</h2><ul>
 <li>如果上一次是同一台设备提交的，那就直接同首次提交方法一致</li>
 <li>如果上一次是另一台设备提交的，那需要先将远程服务器github上面的文件 pull 下来，再 push 上去。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git pull origin gh-pages</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>如果执行<code>git remote add origin git@git.coding.net:xheart/xheartx.git</code>，出现错误：</p>
 <blockquote>
-<p>fatal: remote origin already exists </p>
+<p>fatal: remote origin already exists</p>
 </blockquote>
 <p>则执行以下语句：</p>
 <blockquote>
@@ -386,12 +409,17 @@
 </blockquote>
 <p>则执行以下语句：</p>
 <blockquote>
-<p>git push origin gh-pages </p>
+<p>git push origin gh-pages</p>
 </blockquote>
 <h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>创建一个本地分支gh-pages,并切换到该分支下</p>
 <pre><code>git branch gh-pages
 git checkout gh-pages
-</code></pre><h1 id="git-push用法和常见问题分析"><a href="#git-push用法和常见问题分析" class="headerlink" title="git push用法和常见问题分析"></a>git push用法和常见问题分析</h1><h2 id="Git-push"><a href="#Git-push" class="headerlink" title="Git push"></a>Git push</h2><pre><code>git push origin test:master       // 提交本地test分支作为远程的master分支
+</code></pre><h1 id="git-push用法和常见问题分析"><a href="#git-push用法和常见问题分析" class="headerlink" title="git push用法和常见问题分析"></a>git push用法和常见问题分析</h1><h2 id="提交可访问的代码"><a href="#提交可访问的代码" class="headerlink" title="提交可访问的代码"></a>提交可访问的代码</h2><p>github中默认只有一个库的master可以访问，要想其它库的代码，可访问，需要提交到gh-pages分支。</p>
+<p>提交：在本地根目录打开<code>git bash</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<p>更新：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git remote add origin git@git.coding.net:xheart/xheartx.git</span><br><span class="line"></span><br><span class="line">git pull origin gh-pages</span><br><span class="line"></span><br><span class="line">git add .  </span><br><span class="line"></span><br><span class="line">git commit -m &quot;init&quot;</span><br><span class="line"></span><br><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<h2 id="Git-push"><a href="#Git-push" class="headerlink" title="Git push"></a>Git push</h2><pre><code>git push origin test:master       // 提交本地test分支作为远程的master分支
 git push origin test:test         // 提交本地test分支作为远程的test分支
 </code></pre><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p>
 <pre><code>git push origin :test             // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心。
@@ -614,7 +642,7 @@ git push
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于上传文件到github的方法"><span class="nav-number">1.</span> <span class="nav-text">关于上传文件到github的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#首次提交"><span class="nav-number">1.1.</span> <span class="nav-text">首次提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交更新"><span class="nav-number">1.2.</span> <span class="nav-text">提交更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-number">1.3.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建分支"><span class="nav-number">1.4.</span> <span class="nav-text">创建分支</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-push用法和常见问题分析"><span class="nav-number">2.</span> <span class="nav-text">git push用法和常见问题分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-push"><span class="nav-number">2.1.</span> <span class="nav-text">Git push</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo问题"><span class="nav-number">2.2.</span> <span class="nav-text">hexo问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于上传文件到github的方法"><span class="nav-number">1.</span> <span class="nav-text">关于上传文件到github的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先建立仓库"><span class="nav-number">1.1.</span> <span class="nav-text">先建立仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传README-md文件"><span class="nav-number">1.2.</span> <span class="nav-text">上传README.md文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首次提交"><span class="nav-number">1.3.</span> <span class="nav-text">首次提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交更新"><span class="nav-number">1.4.</span> <span class="nav-text">提交更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-number">1.5.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建分支"><span class="nav-number">1.6.</span> <span class="nav-text">创建分支</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-push用法和常见问题分析"><span class="nav-number">2.</span> <span class="nav-text">git push用法和常见问题分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#提交可访问的代码"><span class="nav-number">2.1.</span> <span class="nav-text">提交可访问的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-push"><span class="nav-number">2.2.</span> <span class="nav-text">Git push</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo问题"><span class="nav-number">2.3.</span> <span class="nav-text">hexo问题</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
