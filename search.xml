@@ -2814,7 +2814,7 @@ Help（帮助）
 <p>A <a href="http://www.jianshu.com/p/21d355525bdf#fn_lemma_a" title="描述" target="_blank" rel="external"><a href="链接地址" title="描述">1</a></a></p>
 <h3 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">为输入的URL或邮箱自动创建链接，如test@domain.com。</span><br><span class="line">Markdown语法：</span><br><span class="line"></span><br><span class="line">&lt;test@domain.com&gt;</span><br></pre></td></tr></table></figure>
 <p>预览效果：</p>
-<p><a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#116;&#101;&#x73;&#x74;&#64;&#100;&#x6f;&#x6d;&#x61;&#x69;&#x6e;&#46;&#99;&#111;&#x6d;">&#116;&#101;&#x73;&#x74;&#64;&#100;&#x6f;&#x6d;&#x61;&#x69;&#x6e;&#46;&#99;&#111;&#x6d;</a></p>
+<p><a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#116;&#101;&#x73;&#116;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#111;&#109;">&#116;&#101;&#x73;&#116;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#111;&#109;</a></p>
 <h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">在特殊字符，如*、[、&gt;等前面加\可使特殊格式字符转换为正常字符打出（有序列表符号如1.，须在. 前加\）。</span><br><span class="line"></span><br><span class="line">Markdown语法：</span><br><span class="line"></span><br><span class="line">\\</span><br><span class="line">\`</span><br><span class="line">\*</span><br><span class="line">\_</span><br><span class="line">\&#123;\&#125;</span><br><span class="line">\[\]</span><br><span class="line">\(\)</span><br><span class="line">\#</span><br><span class="line">\+</span><br><span class="line">\-</span><br><span class="line">\.</span><br><span class="line">\!</span><br></pre></td></tr></table></figure>
 <p>预览效果：</p>
 <p>\<br>`<br>*<br>_<br>{}<br>[]<br>()<br>#<br>+<br>-<br>.<br>!</p>
@@ -3195,8 +3195,7 @@ Help（帮助）
 <p>进入新建仓库的界面</p>
 <p><img src="http://7xvjap.com1.z0.glb.clouddn.com/2016-01-15-03.png" alt="new repository"></p>
 <p>　填一下仓库名称，Initialize this repository with a README是可选的，不过本人建议最好选上，可以在后面省一个步骤。填好之后，点Create repository就行了。</p>
-<p>##克隆仓库 ##</p>
-<p>第二步开始就基本进入命令行模式了，不过要先从github上下载命令行工具。下载地址：<a href="http://windows.github.com/" target="_blank" rel="external">http://windows.github.com/</a></p>
+<h2 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h2><p>第二步开始就基本进入命令行模式了，不过要先从github上下载命令行工具。下载地址：<a href="http://windows.github.com/" target="_blank" rel="external">http://windows.github.com/</a></p>
 <p>　　然后进行简单的安装之后，会在桌面上创建两个图标，GitHub和Git Shell，GitHub是图形界面，Git Shell是命令行模式，而且默认的Git仓库是建在C盘的，个人建议要把路径重设下。</p>
 <p>　　点开Git Shell，进入命令行。首先我们先要把GitHub上的我们新建的仓库clone下来，为了演示，我在GitHub上新建了一个名称为myRepoForBlog的git。</p>
 <p>　　在初始化版本库之前，先要确认认证的公钥是否正确，如下：</p>
