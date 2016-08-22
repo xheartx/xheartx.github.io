@@ -1,17 +1,9 @@
 {
-<<<<<<< HEAD
   "name": "X.Heart",
   "version": "v2015",
   "homepage": "https://xheartx.com",
   "authors": [
     "X.Heart <xx546593797@gmail.com>"
-=======
-  "name": "Vi",
-  "version": "v2015",
-  "homepage": "https://github.com/iissnan/iissnan.github.com",
-  "authors": [
-    "iissnan <iissnan@gmail.com>"
->>>>>>> 2979d93a68dd523e624476df642d186aab38804e
   ],
   "main": "index.html",
   "private": true,
