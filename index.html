@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<<<<<<< HEAD
 
 <head>
     <meta charset="utf-8" />
@@ -7,10 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>X.Heart Home</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+=======
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>X.Heart Home</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+>>>>>>> 4511f9b5b11a56d3f30ca83727571c7c42fd6939
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <div class="vi">
         <div class="sidebar">
             <div class="header">
@@ -105,4 +115,96 @@
     </script>
 </body>
 
+=======
+<div class="vi">
+    <div class="sidebar">
+        <div class="header">
+            <h1>X.Heart</h1>
+            <div class="quote">
+                <p class="quote-text animate-init"><em>"What doesn't kill you,makes you stronger."</em></p>
+                <p class="quote-author animate-init"> —— <em><strong>Nietzsche</strong></em></p>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="https://github.com/xstrayx" class="animate-init">GitHub</a>
+            <a href="https://www.douban.com/people/148255497/" class="animate-init">DouBan</a>
+            <a href="https://twitter.com/xx546593797" class="animate-init">Twitter</a>
+            <a href="http://blog.xheartx.com/about/" class="animate-init">About</a>
+            <p>
+                <a href="http://blog.xheartx.com" class="animate-init">
+                    进入博客
+                </a>
+            </p>
+        </div>
+        <div class="location">
+            <i class="location-icon"></i>
+            <span class="location-text animate-init">HangZhou - China</span>
+        </div>
+        <div class="relocating">
+            Navigating to: <span class="relocate-location"></span>...
+        </div>
+    </div>
+
+    <div class="content">
+        <span class="close">close</span>
+    </div>
+</div>
+<div class="bj">
+    <div class="bjj">
+    </div>
+    </div>
+<script type="text/javascript" src="assets/vendors/jquery/index.js"></script>
+<script type="text/javascript" src="/assets/vendors/js/CFS.Snow.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var delay = 1;
+        var DELAY_STEP = 200;
+        var animationOptions = { opacity: 1, top: 0};
+
+        $('h1').animate(animationOptions).promise()
+                .pipe(animateMain)
+                .pipe(animateLocationIcon);
+
+        function animateMain() {
+            var dfd = $.Deferred();
+            var els = $('.animate-init');
+            var size = els.size();
+
+            els.each(function (index, el) {
+                delay++;
+                $(el).delay(index * DELAY_STEP)
+                        .animate(animationOptions);
+                (size - 1 === index) && dfd.resolve();
+            });
+            return dfd.promise();
+        }
+
+        function animateLocationIcon() {
+            $('.location-icon').delay(delay * DELAY_STEP).animate({
+                opacity: 1,
+                top: 0
+            }).promise().done(animationQuote);
+        }
+
+        function animationQuote() {}
+
+        $(document.body).on('keydown', function (event) {
+            // Press 'b' key
+            if (event.which === 66) {
+                $('.relocate-location').text('Bookmark Page');
+                $('.relocating').css('opacity', 1);
+
+                window.setTimeout(function () {
+                    window.location.href = '/bookmarks.html';
+                }, 1000);
+            }
+        });
+    });
+
+    window.onload = function(){
+            snow.down();
+        };
+</script>
+</body>
+>>>>>>> 4511f9b5b11a56d3f30ca83727571c7c42fd6939
 </html>

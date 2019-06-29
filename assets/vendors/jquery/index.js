@@ -8,6 +8,7 @@ $( document ).ready(function() {
 });
 
 (function(){
+<<<<<<< HEAD
     // var bp = document.createElement('script');
     // var curProtocol = window.location.protocol.split(':')[0];
     // if (curProtocol === 'https') {
@@ -18,4 +19,16 @@ $( document ).ready(function() {
     // }
     // var s = document.getElementsByTagName("script")[0];
     // s.parentNode.insertBefore(bp, s);
+=======
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+>>>>>>> 4511f9b5b11a56d3f30ca83727571c7c42fd6939
 })();
